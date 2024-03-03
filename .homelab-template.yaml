@@ -1,4 +1,4 @@
-_commit: v1.6.5
+_commit: v1.6.6
 _src_path: /home/crthomas/code/charlesthomas/homelab-template
 additionalResources: cluster-issuer.yaml
 backups: false
@@ -7,7 +7,7 @@ helmCrds: true
 helmName: cert-manager
 helmRelease: cert-manager
 helmRepo: https://charts.jetstack.io
-helmValues: values.yaml
+helmValues: helm/values.yaml
 helmVersion: v1.13.2
 ingSecret: ''
 ingress: false
