@@ -1,4 +1,4 @@
-_commit: v1.6.6
+_commit: v1.8.1
 _src_path: /home/crthomas/code/charlesthomas/homelab-template
 additionalResources: cluster-issuer.yaml
 backups: false
@@ -9,7 +9,9 @@ helmRelease: cert-manager
 helmRepo: https://charts.jetstack.io
 helmValues: helm/values.yaml
 helmVersion: v1.13.2
-ingSecret: ''
+homepageEnabled: true
+ingHost: cert-manager.crt.house
+ingName: cert-manager
 ingress: false
 labels: 'app.kubernetes.io/instance: cert-manager'
 name: cert-manager
