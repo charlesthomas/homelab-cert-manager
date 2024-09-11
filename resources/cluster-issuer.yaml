@@ -20,6 +20,7 @@ spec:
         dnsNames:
         - "*.crt.house"
         - "*.crt.lol"
+        - "*.rlesthom.as"
       dns01:
         cloudflare:
           email: ch@rlesthom.as
@@ -49,6 +50,7 @@ spec:
         dnsNames:
         - "*.crt.house"
         - "*.crt.lol"
+        - "*.rlesthom.as"
       dns01:
         cloudflare:
           email: ch@rlesthom.as
