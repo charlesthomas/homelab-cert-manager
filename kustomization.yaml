@@ -5,8 +5,10 @@ namespace: cert-manager
 
 commonAnnotations:
   repo: https://github.com/charlesthomas/homelab-cert-manager
-commonLabels:
-  app.kubernetes.io/instance: cert-manager
+labels:
+- includeSelectors: true
+  pairs:
+    app.kubernetes.io/instance: cert-manager
 
 resources:
 - resources/cluster-issuer.yaml
@@ -21,3 +23,11 @@ helmCharts:
   repo: https://charts.jetstack.io
   valuesFile: helm/values.yaml
   version: v1.13.2
+configMapGenerator:
+- name: grafana-dashboard-cert-manager
+  files:
+  - grafana/cert-manager.json
+  options:
+    disableNameSuffixHash: true
+    labels:
+      grafana_dashboard: "1"
