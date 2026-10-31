@@ -5,8 +5,10 @@ namespace: cert-manager
 
 commonAnnotations:
   repo: https://github.com/charlesthomas/homelab-cert-manager
-commonLabels:
-  app.kubernetes.io/instance: cert-manager
+labels:
+- includeSelectors: true
+  pairs:
+    app.kubernetes.io/instance: cert-manager
 
 resources:
 - resources/cluster-issuer.yaml
